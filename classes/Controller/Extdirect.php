@@ -23,8 +23,8 @@ class Controller_ExtDirect extends Controller
     
     public function action_api($output = TRUE)
     {
-        $config_defaults = Kohana::config('extdirect.defaults');
-        $config_api = Kohana::config('extdirect.api');
+        $config_defaults = Kohana::$config->load('extdirect.defaults');
+        $config_api = Kohana::$config->load('extdirect.api');
         $cache_file = Kohana::find_file('cache', 'api_cache', 'txt');
         
         if($config_defaults['cache_enabled'])

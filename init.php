@@ -10,7 +10,7 @@
  */
 
 // Check if config is allowing examples
-$config_defaults = Kohana::config('extdirect.defaults');
+$config_defaults = Kohana::$config->load('extdirect.defaults');
 if($config_defaults['enable_examples'])
 {
     // For our examples media files

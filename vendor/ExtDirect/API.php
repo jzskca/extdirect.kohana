@@ -233,7 +233,7 @@ class ExtDirect_API {
     }
     
     private function _print($api) {
-        //header('Content-Type: text/javascript'); Not suitable for KO3
+        header('Content-Type: text/javascript');
 
         echo ($this->_namespace ? 
             'Ext.ns(\'' . substr($this->_descriptor, 0, strrpos($this->_descriptor, '.')) . '\'); ' . $this->_descriptor:
